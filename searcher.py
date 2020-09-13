@@ -1,4 +1,4 @@
-import numpy as np
+# import numpy as np
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 
@@ -13,7 +13,6 @@ again and again...
 
 
 def search():
-    np.set_printoptions(suppress=True)
     # options = Options()
     # options.add_argument('--headless')
     # driver = webdriver.Chrome(chrome_options=options)
@@ -31,6 +30,7 @@ def search():
     print(total_internet_usage.__str__()[:5], ' GByte')
     driver.quit()
 
-    total_internet_usage = '{:.7f}'.format(total_internet_usage).__str__()[:5]
+    total_internet_usage = '{:.7f}'.format(total_internet_usage)[:5]
 
+    print(total_internet_usage)
     return total_internet_usage
